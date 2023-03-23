@@ -1,0 +1,25 @@
+.emptyState {
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.emptyState img {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.emptyState span {
+  font-size: 1rem;
+  color: var(--gray-300);
+  font-weight: 700;
+}
+
+.emptyState span p:last-child {
+  font-weight: 400;
+}
