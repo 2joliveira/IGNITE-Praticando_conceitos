@@ -26,6 +26,13 @@ export function TaskList() {
     };
   };
 
+  const handleKeyPress = (e: any) => {
+    if(e.charCode === 13) {
+      e.preventDefault();
+      handleCreateTask();
+    }
+  }
+
   const renderTasks = useCallback(() => {
     return (
       <div>
@@ -57,6 +64,7 @@ export function TaskList() {
           placeholder="Adicione uma nova tarefa"
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          onKeyPress={(e) => handleKeyPress(e)}
         />
         <button type="button" onClick={handleCreateTask}>
           Criar <PlusCircle size={20} weight="bold" />
